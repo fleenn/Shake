@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<script src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/ratchet.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<script src="js/lol.js" type="text/javascript" charset="utf-8"></script>
+		<title></title>
+	</head>
+
+	<body ontouchstart>
+		<input type="hidden" id="score_hidden" value="0" />
+		<div class="_marquee">
+			<marquee direction=up scrollamount=1 scrolldelay=100 onmouseover='this.stop()' onmouseout='this.start()'>
+				<table>
+					<tr>
+						<td>用户92**获得11.1元红包+1000元体验金</td>
+					</tr>
+					<tr>
+						<td>用户hg**获得111元红包+1000元体验金</td>
+					</tr>
+					<tr>
+						<td>用户z3**获得11.1元红包+1000元体验金</td>
+					</tr>
+					<tr>
+						<td>用户	ss**获得1.1元红包+1000元体验金</td>
+					</tr>
+				</table>
+			</marquee>
+		</div>
+		<div class="shake">
+			<img id="hand_shake" src="img/hand.png" />
+		</div>
+		<img src="img/index_bg.jpg" />
+		<ul class="bottom_button">
+			<li>
+				<a id="rank"><img src="img/list_button.png" /></a>
+			</li>
+			<li id="ll">
+				<a id="lol" onclick="send();init()"><img src="img/lol.png" /></a>
+			</li>
+			<li>
+				<a id="notice"><img src="img/rules.png" /></a>
+			</li>
+		</ul>
+
+		<div class="list">
+			<div class="list_wrapper">
+				<div class="tittle">
+					<img id="tittle_list" src="img/tittle_list.png" />
+					<p>
+						<b>您已赢得11.1元红包+1000元体验金</b>
+					</p>
+				</div>
+				<div class="list_content">
+					<div class="conten_button">
+						<button class="btn">分享赢iPhone6S</button>
+						<button id="use" class="btn">使用体验金</button>
+					</div>
+					<div class="rules">
+						<p>互助金服1周年庆，疯抢1亿元现金。11月11日~11月21日，玩家打开游戏界面在10秒内疯狂摇动手机参加游戏，根据摇动频率增加积分值，即可获得相应奖品。
+						</p>
+						<p> 一、积分值对应奖品：</p>
+						<div class="">
+							<img src="img/award.png" />
+						</div>
+						<p>二、分享好友获得礼品：</p>
+						<p>转发并成功邀请好友第一名：iPhone6S一部； 转发并成功邀请好友参与游戏可获得随机流量；</p>
+						<p>三、投资有大奖：</p>
+						<p>用体验金投资的1、11、111、1111位投资用户可获得1111元现金红包奖励；</p>
+						<p style="text-align: center;">如有疑问请咨询：400-8585-685。</p>
+					</div>
+					<div class="tiyanjin">
+						<div class="content-padded">
+							<span class="icon icon-close" style="padding-top: 3%;"></span>
+						</div>
+						<p id="yellow" style="color:#f6ff02;">1000元已经充值进您 互助金服账户</p>
+						<hr />
+						<p id="white" style="color:#FFFFFF;">请登录www.huzhujingfu.com领取，账户名为您的手机号，初始密码为123456。</p>
+					</div>
+					<table id="rank_list">
+						<tr>
+							<th>Header</th>2w
+							<th>Header</th>
+							<th>Header</th>
+						</tr>
+						<tr>
+							<td>Data</td>
+							<td>Data</td>
+							<td>Data</td>
+						</tr>
+						<tr>
+							<td>Data</td>
+							<td>Data</td>
+							<td>Data</td>
+						</tr>
+						<tr>
+							<td>Data</td>
+							<td>Data</td>
+							<td>Data</td>
+						</tr>
+						<tr>
+							<td>Data</td>
+							<td>Data</td>
+							<td>Data</td>
+						</tr>
+						<tr>
+							<td>Data</td>
+							<td>Data</td>
+							<td>Data</td>
+						</tr>
+						<tr>
+							<td>Data</td>
+							<td>Data</td>
+							<td>Data</td>
+						</tr>
+						<tr>
+							<td>Data</td>
+							<td>Data</td>
+							<td>Data</td>
+						</tr>
+						<tr>
+							<td>Data</td>
+							<td>Data</td>
+							<td>Data</td>
+						</tr>
+						<tr>
+							<td>Data</td>
+							<td>Data</td>
+							<td>Data</td>
+						</tr>
+						<tr>
+							<td>Data</td>
+							<td>Data</td>
+							<td>Data</td>
+						</tr>
+					</table>
+				</div>
+				<div class="footer_cancel content-padded">
+					<img class="icon-close" src="img/close_button.png" />
+				</div>
+				<img src="img/notice2.png" />
+			</div>
+		</div>
+		<div class="shock">
+			<div class="shock_tittle">
+				<p>
+					倒计时<span id="second">10</span>秒
+				</p>
+			</div>
+			<div class="shock_content">
+				<div class="lol_bar"></div>
+				<img src="img/shock_bar.png" style="width: 79%;" />
+			</div>
+		</div>
+		<div class="finish">
+			<!--<div class="finish_wrapper">-->
+			<div class="finish_tittle">
+				<p>
+					英雄您本次的成绩为<span id="score">0</span>积分，已撸败全国<span id="percent"></span>%对手，获得‘<span><img id="score_tittle" src="img/small_lol.png"/></span>’的终身荣誉称号。
+				</p>
+			</div>
+			<div class="finish_content">
+				<img src="img/hongbao1.1.png" />
+				<div class="finish_button">
+					<a href="">
+						<button class="btn">再撸一发</button>
+					</a>
+					<button class="btn">上传成绩领取红包</button>
+				</div>
+			</div>
+			<div class="footer_tips">
+				<p>注：</p>
+				<p>互君建议皇上每日只撸三次，并上传您的最佳成绩，领取奖品。 体验金请登陆官网投资，第11、111、1111位使用体验金者奖</p>
+			</div>
+			<!--</div>-->
+		</div>
+		<div class="overlay"></div>
+	</body>
+
+</html>
